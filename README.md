@@ -1,16 +1,126 @@
-# React + Vite
+# Donora Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern blood donation management platform built with React, Vite, and Tailwind CSS. Donora connects blood donors with recipients through an easy-to-use dashboard, donation request system, donor search, and funding support.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Frontend: https://donora-client.vercel.app/
 
-## React Compiler
+Backend API: https://donora-server.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Repository
 
-## Expanding the ESLint configuration
+Client Repository:
+https://github.com/code-samid/Donora-client
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Server Repository:
+https://github.com/code-samid/Donora-server
+
+## Features
+
+### Public Features
+
+* Home page with platform overview
+* User registration and login
+* Search blood donors by blood group and location
+* View blood donation requests
+* Donation request details page
+* Responsive design for all devices
+
+### Donor Features
+
+* Dashboard overview
+* Profile management
+* Create donation requests
+* Edit donation requests
+* Manage personal donation requests
+* Track donation activities
+
+### Volunteer Features
+
+* Manage blood donation requests
+* Update donation request status
+* Support donor-recipient coordination
+
+### Admin Features
+
+* Dashboard statistics
+* Manage all users
+* Role management
+* Control donation requests
+* Platform monitoring
+
+### Funding System
+
+* Stripe payment integration
+* Funding records management
+* Donation support tracking
+
+## Technologies Used
+
+* React
+* React Router
+* Axios
+* React Hook Form
+* Tailwind CSS
+* Recharts
+* React Hot Toast
+* Vite
+
+## Installation
+
+Clone the repository:
+
+git clone https://github.com/code-samid/Donora-client.git
+
+Navigate to project:
+
+cd Donora-client
+
+Install dependencies:
+
+npm install
+
+Create .env file:
+
+VITE_API_URL=https://donora-server.onrender.com
+
+Run development server:
+
+npm run dev
+
+Build production version:
+
+npm run build
+
+## Test Credentials
+
+You may register with any valid information.
+
+Example:
+
+Email: [admin@donora.com](mailto:admin@donora.com)
+Password: Admin1234
+
+## Project Structure
+
+src/
+├── components/
+├── pages/
+├── hooks/
+├── services/
+├── layouts/
+├── routes/
+└── assets/
+
+## Deployment
+
+Frontend:
+https://donora-client.vercel.app/
+
+Backend:
+https://donora-server.onrender.com
+
+## Author
+
+Samid Ahmed
