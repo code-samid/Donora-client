@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  /* "VitalFlow" style direction: cool blue-white background, deep crimson
+     primary, navy-slate sidebar, single Inter typeface throughout. */
+  --color-bg: #f8f9ff;
+  --color-bg-dim: #eff4ff;
+  --color-surface: #ffffff;
+  --color-ink: #0b1c30;
+  --color-ink-soft: #5c3f40;
+  --color-ink-muted: #906f70;
+  --color-line: #e5bdbe;
+
+  --color-slate-950: #0b1c30;
+  --color-slate-900: #182338;
+  --color-slate-800: #213145;
+  --color-slate-700: #2b3a52;
+  --color-slate-line: rgba(255, 255, 255, 0.12);
+
+  /* Persistent navy-slate sidebar, matched to VitalFlow's "tertiary" token */
+  --color-sidebar: #505b70;
+  --color-sidebar-dim: #44506680;
+
+  --color-brand-600: #920028;
+  --color-brand-500: #b80035;
+  --color-brand-400: #e11d48;
+  --color-brand-50: #ffdada;
+
+  --color-success: #1b8a5a;
+  --color-success-50: #e9f7f0;
+  --color-warning: #b6790c;
+  --color-warning-50: #fdf3e3;
+
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Inter", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+html.dark body {
+  background-color: var(--color-slate-950);
+  color: #eceef0;
+}
+
+::selection { background-color: var(--color-brand-500); color: white; }
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.4s ease-out both; }
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-dim) 25%, #dce5fa 37%, var(--color-bg-dim) 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+html.dark .skeleton {
+  background: linear-gradient(90deg, var(--color-slate-800) 25%, var(--color-slate-700) 37%, var(--color-slate-800) 63%);
+  background-size: 800px 100%;
+}
+
+.font-display { font-family: var(--font-display); font-weight: 700; }
+.font-mono { font-family: var(--font-mono); }
